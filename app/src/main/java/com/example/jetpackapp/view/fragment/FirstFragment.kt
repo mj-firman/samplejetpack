@@ -2,7 +2,6 @@ package com.example.jetpackapp.view.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,8 +38,7 @@ class FirstFragment : Fragment() {
         firstFragmentViewModel?.login()
         firstFragmentViewModel?.getUser()?.observe(this, Observer {
             val accessToken = it.accessToken
-            Log.i(FirstFragment::class.java.simpleName, "accessToken " + accessToken)
-            var bundle = bundleOf("accessToken" to accessToken)
+            val bundle = bundleOf("accessToken" to accessToken)
             findNavController().navigate(R.id.action_firstFragment_to_secondFragment, bundle)
         })
 

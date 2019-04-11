@@ -20,7 +20,7 @@ class SecondFragmentViewModel: ViewModel() {
         apiServices = apiClientAdapter?.getClient()?.create(ApiServices::class.java)
     }
 
-    public fun getNews(token: String): MutableLiveData<List<NewsResponse.NewsEntity>> {
+    fun getNews(token: String): MutableLiveData<List<NewsResponse.NewsEntity>> {
         callNews(token)
         return newsLiveData
     }
@@ -44,7 +44,7 @@ class SecondFragmentViewModel: ViewModel() {
         })
     }
 
-    public fun getErrorData(): MutableLiveData<String> {
+    fun getErrorData(): MutableLiveData<String> {
         return errorData
     }
 
