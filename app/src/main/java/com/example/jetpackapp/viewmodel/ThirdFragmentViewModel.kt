@@ -14,6 +14,7 @@ class ThirdFragmentViewModel: ViewModel() {
     private var apiClientAdapterV2: ApiClientAdapterV2
     private var heroList = MutableLiveData<List<HeroResponse>>()
 
+
     init {
         apiClientAdapterV2 = ApiClientAdapterV2()
         apiServices = apiClientAdapterV2.getClient()?.create(ApiServices::class.java)

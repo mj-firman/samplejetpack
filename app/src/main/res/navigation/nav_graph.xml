@@ -16,6 +16,9 @@
               android:label="fragment_third" tools:layout="@layout/fragment_third">
         <action android:id="@+id/action_thirdFragment_to_firstFragment" app:destination="@id/firstFragment"
                 app:popUpTo="@+id/firstFragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_thirdFragment_to_fourthFragment" app:destination="@id/fourthFragment"/>
     </fragment>
     <fragment android:id="@+id/placeholder"/>
+    <fragment android:id="@+id/fourthFragment" android:name="com.example.jetpackapp.FourthFragment"
+              android:label="fragment_fourth" tools:layout="@layout/fragment_fourth"/>
 </navigation>

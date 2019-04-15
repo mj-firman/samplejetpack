@@ -24,7 +24,7 @@ abstract class HeroAdapter(var context: Context?, var listHero: List<HeroRespons
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         val data = listHero[position]
         holder.tvName.text = data.name
-        Glide.with(context).load(data.imageurl).into(holder.ivProfile)
+        Glide.with(context as Context).load(data.imageurl).into(holder.ivProfile)
     }
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

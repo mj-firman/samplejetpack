@@ -24,7 +24,7 @@ abstract class NewsAdapter(var context: Context?, private var itemsData: ArrayLi
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         val item = itemsData[position]
         holder.tvName.text = item.title
-        Glide.with(context).load(item.urlNewsImageRectangle).into(holder.ivProfile)
+        Glide.with(context as Context).load(item.urlNewsImageRectangle).into(holder.ivProfile)
     }
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

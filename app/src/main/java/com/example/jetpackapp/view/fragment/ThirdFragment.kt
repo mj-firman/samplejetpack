@@ -35,6 +35,10 @@ class ThirdFragment : Fragment() {
             findNavController().navigate(R.id.action_thirdFragment_to_firstFragment)
         }
 
+        view.btnToFourth.setOnClickListener {
+            findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment)
+        }
+
         view.rvHeros.layoutManager = LinearLayoutManager(context)
         view.rvHeros.setHasFixedSize(true)
 
